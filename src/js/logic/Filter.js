@@ -15,7 +15,7 @@ export default class Filter {
 					var newArr = data.filter((item) => {
 						return ~item.filter.indexOf(keyWord);
 					});
-					Card.render(newArr);
+					Card.dataSet(newArr);
 				}
 				if (_t) {
 					_t = _t.parentElement;
