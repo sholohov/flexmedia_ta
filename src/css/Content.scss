@@ -1,0 +1,12 @@
+@import 'prop';
+
+#content {
+	z-index: 1;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	overflow: hidden;
+	height: 100%;
+	max-width: 1620px;
+	background-color: rgb(128, 128, 128);
+}

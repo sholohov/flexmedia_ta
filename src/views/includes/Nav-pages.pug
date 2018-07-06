@@ -1,0 +1,7 @@
+- const navPageList = ['Home', 'Work', 'About', 'Blog', 'Services', 'Contact']
+
+nav#nav-pages
+	ul.list
+		each item, index in navPageList
+			li.list__item(class=index == 0 ? 'active' : '')
+				a(href='#' + item) #{item}

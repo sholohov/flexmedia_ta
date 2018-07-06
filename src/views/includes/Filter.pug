@@ -1,0 +1,8 @@
+- const keywordslist = [['All Works','all'], ['web design', 'design'], ['illustration', 'illustration'], ['photography', 'photography'], ['wallpapers', 'wallpapers'], ['brochures', 'brochures']]
+
+div#filter
+	h3.title Filter
+	ul.list
+		each item, index in keywordslist
+			li.list__item(class=index == 0 ? 'active' : '')
+				a.link(href='#' + item[1] data-keyword=item[1]) #{item[0]}

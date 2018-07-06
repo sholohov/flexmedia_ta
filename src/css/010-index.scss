@@ -1,0 +1,28 @@
+@import 'prop';
+
+html {
+	height: 100%;
+	font-size: 1rem;
+	// .outline;
+
+	body {
+		display: flex;
+		justify-content: center;
+		height: 100vh;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		font-size: 1em;
+		line-height: 1.25em;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		font: 1em/1.25em 'Montserrat', sans-serif, 'Raleway', Arial, Helvetica, 'sans-serif';
+		overflow: visible;
+		user-select: none;
+		background-color: rgb(240, 240, 240);
+
+		* {
+			box-sizing: border-box;
+		}
+	}
+}

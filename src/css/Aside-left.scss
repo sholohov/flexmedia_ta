@@ -1,0 +1,54 @@
+@import 'prop';
+
+#aside-left {
+	z-index: 2;
+	display: flex;
+	overflow-x: visible;
+	overflow-y: auto;
+	flex-direction: column;
+	position: relative;
+	height: 100%;
+	width: 300px;
+	min-width: 300px;
+	background-color: rgb(48, 48, 48);
+	box-shadow: 1rem 0 2rem rgba(0, 0, 0, 0.6);
+
+	.logo {
+		display: block;
+		text-decoration: none;
+		padding: 1.375rem 0;
+		background-color: #fff;
+
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 64px;
+			height: auto;
+		}
+	}
+
+	@media screen {
+		@media (max-width: 22em)  and (orientation: portrait) {
+			right: 3.5rem;
+			width: auto;
+			min-width: auto;
+		}
+
+		@media (max-width: $screen-mobile) and (orientation: portrait), (max-width: $screen-laptop) {
+			position: fixed;
+			left: 0;
+			transition: transform 0.5s;
+			transform: translate3d(-110%, 0, 0);
+		}
+	}
+	
+	&.open {
+		transform: translate3d(0, 0, 0);
+	}
+
+	.copyright {
+		font-size: 12*$rem;
+		margin: 25% 1rem;
+		color: rgba(255, 255, 255, 0.2);
+	}
+}

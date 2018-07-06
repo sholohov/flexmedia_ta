@@ -1,0 +1,48 @@
+//out: null
+
+$color-accent: rgb(250, 69, 60);
+$rem: 0.0625rem;
+$em: 0.0625em;
+$screen-desctop: 80em;
+$screen-laptop: 64em;
+$screen-tablet: 48em;
+$screen-mobile: 30em;
+
+@mixin outline($color: rgba(255, 166, 0, 0.5)) {
+	outline: 1px solid $color !important;
+
+	* , ::before, ::after {
+		outline: 1px solid $color !important;
+	}
+}
+
+@mixin btnReset() {
+	padding: 0;
+	margin: 0;
+	outline: none;
+	border: none;
+	font-size: 1rem;
+	line-height: 1.25em;
+	background-color: transparent;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+@mixin font-face($name: arial, $path: '/', $weight: normal, $style: normal) {
+	@font-face {
+		font-family: $name;
+		src: url(#{$path}.ttf) format('truetype');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+
+@mixin clearFix() {
+	&::before, &::after {
+		content: '';
+		display: block;
+		height: 1px;
+		width: 100%;
+		margin: 0 0 0 -1px;
+	}
+}
