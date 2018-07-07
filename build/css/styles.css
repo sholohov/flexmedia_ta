@@ -494,6 +494,100 @@ html {
       -webkit-transform: scale(1) translateZ(0);
               transform: scale(1) translateZ(0); }
 
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-pack: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  box-align: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-perspective: 390px;
+          perspective: 390px;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fa453c;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s; }
+  #preloader.end {
+    opacity: 0;
+    pointer-events: none; }
+  #preloader .spinner {
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-animation: cssload-wobble 4.59s ease-in-out infinite;
+            animation: cssload-wobble 4.59s ease-in-out infinite; }
+    #preloader .spinner::before, #preloader .spinner::after {
+      display: block;
+      content: "";
+      width: 10vh;
+      height: 10vh;
+      border: 5vh solid;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      animation: cssload-spin 1.73s ease-in-out infinite both reverse; }
+    #preloader .spinner::before {
+      border-color: #dddddd;
+      position: absolute; }
+    #preloader .spinner::after {
+      border-color: black;
+      -webkit-animation-delay: -0.86s;
+              animation-delay: -0.86s; }
+
+@-webkit-keyframes cssload-wobble {
+  0%, 100% {
+    -webkit-transform: rotateX(8.75deg) rotateY(35deg);
+            transform: rotateX(8.75deg) rotateY(35deg); }
+  50% {
+    -webkit-transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+            transform: rotateX(35deg) rotateY(-35deg) rotate(180deg); } }
+
+@keyframes cssload-wobble {
+  0%, 100% {
+    -webkit-transform: rotateX(8.75deg) rotateY(35deg);
+            transform: rotateX(8.75deg) rotateY(35deg); }
+  50% {
+    -webkit-transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+            transform: rotateX(35deg) rotateY(-35deg) rotate(180deg); } }
+
+@-webkit-keyframes cssload-spin {
+  0%, 100% {
+    -webkit-transform: translateZ(6vh) rotateX(14deg);
+            transform: translateZ(6vh) rotateX(14deg); }
+  33% {
+    -webkit-transform: translateZ(-6vh) scale(0.4);
+            transform: translateZ(-6vh) scale(0.4); }
+  66% {
+    -webkit-transform: translateZ(-6vh);
+            transform: translateZ(-6vh); } }
+
+@keyframes cssload-spin {
+  0%, 100% {
+    -webkit-transform: translateZ(6vh) rotateX(14deg);
+            transform: translateZ(6vh) rotateX(14deg); }
+  33% {
+    -webkit-transform: translateZ(-6vh) scale(0.4);
+            transform: translateZ(-6vh) scale(0.4); }
+  66% {
+    -webkit-transform: translateZ(-6vh);
+            transform: translateZ(-6vh); } }
+
 
 [role="button"],
 input[type="submit"],

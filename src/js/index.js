@@ -14,3 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	NavBtn.init();
 	ThemeTuning.init();
 });
+
+window.addEventListener("load", () => {
+	const preloader = document.querySelector("#preloader");
+	preloader.classList.add("end");
+});

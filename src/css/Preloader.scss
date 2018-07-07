@@ -1,0 +1,70 @@
+@import 'prop';
+
+#preloader {
+	position: fixed;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 99;
+	display: flex;
+	box-pack: center;
+	justify-content: center;
+	box-align: center;
+	align-items: center;
+	perspective: 390px;
+	height: 100%;
+	overflow: hidden;
+	background-color: $color-accent;
+	opacity: 1;
+	transition: opacity 0.5s;
+
+	&.end {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.spinner {
+		position: relative;
+		transform-style: preserve-3d;
+		animation: cssload-wobble 4.59s ease-in-out infinite;
+		
+		&::before, &::after {
+			display: block;
+			content: "";
+			width: 10vh;
+			height: 10vh;
+			border: 5vh solid;
+			border-radius: 50%;
+			animation: cssload-spin 1.73s ease-in-out infinite both reverse;
+		}
+		
+		&::before {
+			border-color: rgb(221, 221, 221);
+			position: absolute;
+		}
+		
+		&::after {
+			border-color: black;
+			animation-delay: -0.86s;
+		}
+	}
+}
+
+@keyframes cssload-wobble {
+	0%, 100% {
+		transform: rotateX(8.75deg) rotateY(35deg);
+	}
+	50% {
+		transform: rotateX(35deg) rotateY(-35deg) rotate(180deg);
+	}
+}
+
+@keyframes cssload-spin {
+	0%, 100% {
+		transform: translateZ(6vh) rotateX(14deg);
+	}
+	33% {
+		transform: translateZ(-6vh) scale(0.4);
+	}
+	66% {
+		transform: translateZ(-6vh);
+	}
+}
