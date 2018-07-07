@@ -526,7 +526,9 @@ html {
   transition: opacity 0.5s; }
   #preloader.end {
     opacity: 0;
-    pointer-events: none; }
+    pointer-events: none;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused; }
   #preloader .spinner {
     position: relative;
     -webkit-transform-style: preserve-3d;
