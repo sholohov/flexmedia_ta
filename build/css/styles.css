@@ -295,8 +295,9 @@ html {
 #nav-btn {
   position: fixed;
   display: none;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: 0;
+  right: 0;
+  margin: 0.5rem;
   width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
@@ -644,8 +645,9 @@ button::-moz-focus-inner {
 #theme-tuning {
   z-index: 5;
   position: fixed;
-  right: 1.5rem;
-  bottom: 0.5rem;
+  right: 0;
+  bottom: 0;
+  margin: 0.5rem;
   text-align: right; }
   #theme-tuning .range {
     display: inline-block;
@@ -665,7 +667,7 @@ button::-moz-focus-inner {
     transition: transform 0.3s, opacity 0.3s;
     transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s; }
     #theme-tuning .range:before {
-      content: 'It will be soon'; }
+      content: 'Coming soon'; }
     #theme-tuning .range input[type=range] {
       display: none; }
     #theme-tuning .range.active {
