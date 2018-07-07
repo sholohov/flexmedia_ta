@@ -16,12 +16,6 @@
 	opacity: 1;
 	transition: opacity 0.5s;
 
-	&.end {
-		opacity: 0;
-		pointer-events: none;
-		animation-play-state: paused;
-	}
-
 	.spinner {
 		position: relative;
 		transform-style: preserve-3d;
@@ -45,6 +39,19 @@
 		&::after {
 			border-color: black;
 			animation-delay: -0.86s;
+		}
+	}
+
+	&.end {
+		opacity: 0;
+		pointer-events: none;
+
+		.spinner {
+			animation-play-state: paused;
+
+			&::before, &::after {
+				animation-play-state: paused;
+			}
 		}
 	}
 }

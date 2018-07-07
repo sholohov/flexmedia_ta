@@ -524,11 +524,6 @@ html {
   -webkit-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s; }
-  #preloader.end {
-    opacity: 0;
-    pointer-events: none;
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused; }
   #preloader .spinner {
     position: relative;
     -webkit-transform-style: preserve-3d;
@@ -551,6 +546,15 @@ html {
       border-color: black;
       -webkit-animation-delay: -0.86s;
               animation-delay: -0.86s; }
+  #preloader.end {
+    opacity: 0;
+    pointer-events: none; }
+    #preloader.end .spinner {
+      -webkit-animation-play-state: paused;
+              animation-play-state: paused; }
+      #preloader.end .spinner::before, #preloader.end .spinner::after {
+        -webkit-animation-play-state: paused;
+                animation-play-state: paused; }
 
 @-webkit-keyframes cssload-wobble {
   0%, 100% {
