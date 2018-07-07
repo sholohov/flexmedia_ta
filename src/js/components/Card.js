@@ -13,7 +13,7 @@ export default class Cards {
 					<div class="details">
 						<h3 class="title">${item.title}</h3>
 						<div class="description">${item.descr}</div>
-						<a class="link" href="${item.link}" title="${item.link}"></a>
+						<a class="link icon-right-big" href="${item.link}" title="${item.link}"></a>
 					</div>
 				</li>`
 			);

@@ -1,4 +1,5 @@
 @import 'prop';
+@import 'fontello';
 
 html {
 	height: 100%;
@@ -8,7 +9,7 @@ html {
 	body {
 		display: flex;
 		justify-content: center;
-		height: 100vh;
+		height: 100%;
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
