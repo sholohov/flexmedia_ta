@@ -1,0 +1,44 @@
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+	box-sizing: content-box;
+}
+
+/* Reset `button` and button-style `input` default styles */
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+	/* cursor: default; */
+	padding: 0;
+	overflow: visible;
+	font: inherit;
+	line-height: normal;
+	outline: none;
+	border: 0;
+	color: inherit;
+	background: none;
+	user-select: none;
+	-webkit-appearance: button;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+/* Make `a` like a button */
+
+[role="button"] {
+	color: inherit;
+	cursor: default;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	white-space: pre;
+	user-select: none;
+}

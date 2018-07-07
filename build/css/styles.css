@@ -1,8 +1,54 @@
 @charset "UTF-8";
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; }
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  /* cursor: default; */
+  padding: 0;
+  overflow: visible;
+  font: inherit;
+  line-height: normal;
+  outline: none;
+  border: 0;
+  color: inherit;
+  background: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-appearance: button; }
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* Make `a` like a button */
+[role="button"] {
+  color: inherit;
+  cursor: default;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  white-space: pre;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
 @font-face {
   font-family: 'fontello';
-  src: url("../font/fontello/fontello.eot?74091554");
-  src: url("../font/fontello/fontello.eot?74091554#iefix") format("embedded-opentype"), url("../font/fontello/fontello.woff2?74091554") format("woff2"), url("../font/fontello/fontello.woff?74091554") format("woff"), url("../font/fontello/fontello.ttf?74091554") format("truetype"), url("../font/fontello/fontello.svg?74091554#fontello") format("svg");
+  src: url("../font/fontello/fontello.eot");
+  src: url("../font/fontello/fontello.eot") format("embedded-opentype"), url("../font/fontello/fontello.woff2") format("woff2"), url("../font/fontello/fontello.woff") format("woff"), url("../font/fontello/fontello.ttf") format("truetype"), url("../font/fontello/fontello.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -12,7 +58,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello/fontello.svg?74091554#fontello') format('svg');
+    src: url('../font/fontello/fontello.svg#fontello') format('svg');
   }
 }
 */
@@ -51,6 +97,10 @@
   content: '\f00a'; }
 
 /* '' */
+.icon-color-adjust:before {
+  content: '\f020'; }
+
+/* '' */
 html {
   height: 100%;
   font-size: 1rem; }
@@ -155,6 +205,7 @@ html {
           flex-direction: column;
   overflow: hidden;
   height: 100%;
+  width: 100%;
   max-width: 1620px;
   background-color: gray; }
 
@@ -186,8 +237,8 @@ html {
 @charset "UTF-8";
 @font-face {
   font-family: 'fontello';
-  src: url("../font/fontello/fontello.eot?74091554");
-  src: url("../font/fontello/fontello.eot?74091554#iefix") format("embedded-opentype"), url("../font/fontello/fontello.woff2?74091554") format("woff2"), url("../font/fontello/fontello.woff?74091554") format("woff"), url("../font/fontello/fontello.ttf?74091554") format("truetype"), url("../font/fontello/fontello.svg?74091554#fontello") format("svg");
+  src: url("../font/fontello/fontello.eot");
+  src: url("../font/fontello/fontello.eot") format("embedded-opentype"), url("../font/fontello/fontello.woff2") format("woff2"), url("../font/fontello/fontello.woff") format("woff"), url("../font/fontello/fontello.ttf") format("truetype"), url("../font/fontello/fontello.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -197,7 +248,7 @@ html {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello/fontello.svg?74091554#fontello') format('svg');
+    src: url('../font/fontello/fontello.svg#fontello') format('svg');
   }
 }
 */
@@ -236,6 +287,10 @@ html {
   content: '\f00a'; }
 
 /* '' */
+.icon-color-adjust:before {
+  content: '\f020'; }
+
+/* '' */
 
 #nav-btn {
   position: fixed;
@@ -309,6 +364,14 @@ html {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -431,3 +494,101 @@ html {
       -webkit-transform: scale(1) translateZ(0);
               transform: scale(1) translateZ(0); }
 
+
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; }
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  /* cursor: default; */
+  padding: 0;
+  overflow: visible;
+  font: inherit;
+  line-height: normal;
+  outline: none;
+  border: 0;
+  color: inherit;
+  background: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-appearance: button; }
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* Make `a` like a button */
+[role="button"] {
+  color: inherit;
+  cursor: default;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  white-space: pre;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+#theme-tuning {
+  z-index: 5;
+  position: fixed;
+  right: 1.5rem;
+  bottom: 0.5rem;
+  text-align: right; }
+  #theme-tuning .range {
+    display: inline-block;
+    vertical-align: middle;
+    opacity: 0;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-border-radius: 1.5rem;
+            border-radius: 1.5rem;
+    pointer-events: none;
+    -webkit-transform: translate3d(0.5rem, 0, 0);
+            transform: translate3d(0.5rem, 0, 0);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    -o-transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s; }
+    #theme-tuning .range:before {
+      content: 'It will be soon'; }
+    #theme-tuning .range input[type=range] {
+      display: none; }
+    #theme-tuning .range.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+      pointer-events: auto; }
+  #theme-tuning .tuning-btn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 3rem;
+    height: 3rem;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s; }
+    #theme-tuning .tuning-btn:before {
+      font-size: 1.5rem; }
+    #theme-tuning .tuning-btn:active {
+      -webkit-transform: scale(0.9);
+          -ms-transform: scale(0.9);
+              transform: scale(0.9); }

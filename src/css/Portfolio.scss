@@ -2,6 +2,8 @@
 
 #portfolio {
 	display: flex;
+	align-items: flex-start;
+	flex-grow: 1;
 	flex-wrap: wrap;
 	list-style: none;
 	padding: 0;
