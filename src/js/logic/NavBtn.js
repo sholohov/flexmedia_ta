@@ -4,7 +4,7 @@ export default class NavBtn {
 	static init() {
 		const navBtnElem = document.querySelector('#nav-btn');
 		const asideLeftElem = document.querySelector('#aside-left');
-		const portfolioElem = document.querySelector('#portfolio');
+		const contentElem = document.querySelector('#content');
 
 		navBtnElem.addEventListener('click', () => {
 			let isActive = navBtnElem.classList.toggle('active');
@@ -16,10 +16,10 @@ export default class NavBtn {
 			return el.offsetWidth - el.clientWidth;
 		}
 
-		navBtnElem.style.right = getScrollbarWidth(portfolioElem) + 'px';
+		navBtnElem.style.right = getScrollbarWidth(contentElem) + 'px';
 
 		Tools.onWindowResize(() => {
-			navBtnElem.style.right = getScrollbarWidth(portfolioElem) + 'px';
+			navBtnElem.style.right = getScrollbarWidth(contentElem) + 'px';
 		}, 0);
 	}
 }

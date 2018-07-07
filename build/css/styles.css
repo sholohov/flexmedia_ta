@@ -151,7 +151,9 @@ html {
   min-width: 300px;
   background-color: #303030;
   -webkit-box-shadow: 1rem 0 2rem rgba(0, 0, 0, 0.6);
-          box-shadow: 1rem 0 2rem rgba(0, 0, 0, 0.6); }
+          box-shadow: 1rem 0 2rem rgba(0, 0, 0, 0.6);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
   #aside-left .logo {
     display: block;
     text-decoration: none;
@@ -206,8 +208,9 @@ html {
   overflow: hidden;
   height: 100%;
   width: 100%;
-  max-width: 1620px;
-  background-color: gray; }
+  background-color: gray;
+  overflow-x: hidden;
+  overflow-y: auto; }
 
 #filter .title {
   margin: 0;
@@ -361,52 +364,34 @@ html {
         background-color: #fa453c; }
 
 #portfolio {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  display: block;
   list-style: none;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
-  overflow-y: auto; }
+  overflow: visible; }
   #portfolio .item {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: block;
+    float: left;
     position: relative;
-    width: 25%;
+    width: 405px;
     height: 311px;
     overflow: hidden;
     color: white;
-    background-color: #460f0f; }
+    background-color: grey;
+    background-position: center;
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-repeat: no-repeat; }
     #portfolio .item:nth-child(2n) {
       background-color: #bababa; }
 
+@media screen and (max-width: 125em) {
+  #portfolio .item {
+    width: 25%; } }
+
 @media screen and (max-width: 100em) {
   #portfolio .item {
-    width: 33.3333333%; } }
+    width: 33.3333%; } }
 
 @media screen and (max-width: 75em) {
   #portfolio .item {
@@ -415,20 +400,6 @@ html {
 @media screen and (max-width: 50em) {
   #portfolio .item {
     width: 100%; } }
-    #portfolio .item .pic {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 0;
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      background: grey;
-      background-position: center;
-      -webkit-background-size: cover;
-              background-size: cover;
-      background-repeat: no-repeat; }
     #portfolio .item .details {
       opacity: 0;
       display: -webkit-box;
@@ -459,7 +430,7 @@ html {
       transition: 0.3s; }
       #portfolio .item .details .title {
         margin: 0;
-        padding: 0.5rem;
+        padding: 0.5rem 0;
         font-size: 1.5rem;
         line-height: 1.25em;
         font-weight: 200; }

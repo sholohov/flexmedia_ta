@@ -5,7 +5,7 @@ export default class ThemeTuning {
 		const themeTunungElem = document.querySelector('#theme-tuning');
 		const range = document.querySelector('#theme-tuning .range');
 		const btn = document.querySelector('#theme-tuning .tuning-btn');
-		const portfolioElem = document.querySelector('#portfolio');
+		const contentElem = document.querySelector('#content');
 
 		btn.addEventListener('click', () => {
 			let isActive = btn.classList.toggle('active');
@@ -17,10 +17,10 @@ export default class ThemeTuning {
 			return el.offsetWidth - el.clientWidth;
 		}
 
-		themeTunungElem.style.right = getScrollbarWidth(portfolioElem) + 'px';
+		themeTunungElem.style.right = getScrollbarWidth(contentElem) + 'px';
 
 		Tools.onWindowResize(() => {
-			themeTunungElem.style.right = getScrollbarWidth(portfolioElem) + 'px';
+			themeTunungElem.style.right = getScrollbarWidth(contentElem) + 'px';
 		}, 0);
 	}
 }
