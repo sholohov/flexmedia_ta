@@ -5,9 +5,9 @@
 	display: none;
 	top: 0;
 	right: 0;
-	margin: 0.5rem;
-	width: 2.5rem;
-	height: 2.5rem;
+	margin: 1rem;
+	width: 3.5rem;
+	height: 3.5rem;
 	cursor: pointer;
 	font-size: 1rem;
 	outline: none;
@@ -16,6 +16,12 @@
 	filter: drop-shadow(0 0.125rem 0.25rem black);
 
 	.sandwich-icon {
+		display: block;
+		transform: rotateY(0) translateZ(0);
+		transition: transform 0.3s;
+		perspective: 10rem;
+		transform-style: preserve-3d;
+
 		&::before, &::after {
 			content: '';
 			display: block;
@@ -23,13 +29,15 @@
 			width: 2rem;
 			height: 4px;
 			background-color: rgb(255, 255, 255);
-			transition: transform 0.5s;
+			transition: transform 0.3s;
 		}
 	}
 	
 	&.active {
 		.sandwich-icon {
 			margin: 0;
+			transform: rotateY(-180deg);
+
 			&::after {
 				transform: rotateZ(45deg) translate(-0.25rem, -0.25rem);
 			}

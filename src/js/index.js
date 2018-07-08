@@ -4,9 +4,9 @@ console.warn("Hello people!");
 import './libs/polyfils';
 import cardData from '../data/cards';
 import Card from './components/Card';
-import Filter from './logic/Filter';
-import NavBtn from './logic/NavBtn';
-import ThemeTuning from './logic/ThemeTuning';
+import Filter from './core/Filter';
+import NavBtn from './core/NavBtn';
+import ThemeTuning from './core/ThemeTuning';
 
 document.addEventListener("DOMContentLoaded", () => {
 	Card.dataSet(cardData.cards);

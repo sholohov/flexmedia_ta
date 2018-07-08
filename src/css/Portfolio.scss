@@ -25,6 +25,9 @@
 		}
 
 		@media screen {
+			@media (max-width: 175em) {
+				width: 20%;
+			}
 			@media (max-width: 125em) {
 				width: 25%;
 			}
