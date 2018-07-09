@@ -195,7 +195,8 @@ html {
     font-size: 0.75rem;
     margin: 0;
     padding: 25% 1rem;
-    color: rgba(255, 255, 255, 0.2); }
+    color: rgba(255, 255, 255, 0.2);
+    background-color: #303030; }
 
 #content {
   z-index: 1;
