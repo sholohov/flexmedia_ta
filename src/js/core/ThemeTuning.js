@@ -82,5 +82,10 @@ export default class ThemeTuning {
 		Tools.onWindowResize(() => {
 			themeTunungElem.style.right = getScrollbarWidth(contentElem) + 'px';
 		}, 0);
+
+		if (Tools.IEDetect() >= 11) {
+			range.innerHTML = `<span>Sorry, IE11 and the version below do not support this feature</span>`;
+			return;
+		}
 	}
 }
