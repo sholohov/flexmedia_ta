@@ -1,112 +1,106 @@
-$track-color: rgb(128, 128, 128);
-$thumb-color: white;
-
-$thumb-radius: 50%;
-$thumb-height: 32px;
-$thumb-width: 32px;
-$thumb-shadow-size: 4px;
-$thumb-shadow-blur: 8px;
-$thumb-shadow-color: rgba(0, 0, 0, 0.2);
-$thumb-border-width: 0;
-$thumb-border-color: transparent;
-
-$track-width: 100%;
-$track-height: 4px;
-$track-shadow-size: 0;
-$track-shadow-blur: 0;
-$track-shadow-color: transparent;
-$track-border-width: 0;
-$track-border-color: transparent;
-
-$track-radius: 2px;
-$contrast: 0;
-
-@mixin shadow($shadow-size, $shadow-blur, $shadow-color) {
-	box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0px 0px $shadow-size $shadow-color + 5%;
+@mixin shadow($x: 0, $y: 0.125rem, $blur: 0.5rem, $color: rgba(0, 0, 0, 0.2)) {
+	box-shadow: $x $y $blur $color;
 }
 
-@mixin track() {
-	width: $track-width;
-	height: $track-height;
-	cursor: pointer;
-	animate: 0.2s;
-}
+@mixin range() {
+	$track-color: grey;
+	$thumb-height: 2rem;
 
-@mixin thumb() {
-	@include shadow($thumb-shadow-size, $thumb-shadow-blur, $thumb-shadow-color);
-	border: $thumb-border-width solid $thumb-border-color;
-	height: $thumb-height;
-	width: $thumb-width;
-	border-radius: $thumb-radius;
-	background: $thumb-color;
-	cursor: ew-resize;
-}
+	$track-height: 0.25rem;
+	$thumb-color: #fff;
 
-input[type=range] {
-	-webkit-appearance: none;
-	margin: $thumb-height/2 0;
-	width: $track-width;
+	.container {
+		display: block;
+		position: relative;
+		
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: $thumb-height / 4;
+			right: $thumb-height / 4;
+			border-radius: $track-height / 2;
+			height: $track-height;
+			background-color: $track-color;
+			transform: translateY(-50%);
+		}
 
-	&:focus {
-		outline: none;
-	}
+		input[type=range] {
+			position: relative;
 
-	&::-webkit-slider-runnable-track {
-		@include track();
-		@include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
-		background: $track-color;
-		border-radius: $track-radius;
-		border: $track-border-width solid $track-border-color;
-	}
+			margin: 0;
+			width: 100%;
+			height: 2.25rem !important;
+			font-size: 1rem;
+			border: none;
+			background-color: transparent;
+			overflow: visible;
+			-webkit-appearance: none;
 
-	&::-webkit-slider-thumb {
-		@include thumb();
-		-webkit-appearance: none;
-		margin-top: ((-$track-border-width * 2 + $track-height) / 2) - ($thumb-height / 2);
-	}
+			&:focus {
+				outline: none;
+				border: none;
+			}
 
-	&:focus::-webkit-slider-runnable-track {
-		background: lighten($track-color, $contrast);
-	}
+			&::-webkit-slider-runnable-track {
+				width: 100%;
+				cursor: pointer;
+				background-color: transparent;
+			}
 
-	&::-moz-range-track {
-		@include track();
-		@include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
-		background: $track-color;
-		border-radius: $track-radius;
-		border: $track-border-width solid $track-border-color;
-	}
-	&::-moz-range-thumb {
-		@include thumb();
-	}
+			&::-moz-range-track {
+				width: 100%;
+				cursor: pointer;
+				background-color: transparent;
+			}
 
-	&::-ms-track {
-		@include track();
-		background: transparent;
-		border-color: transparent;
-		border-width: $thumb-width 0;
-		color: transparent;
-	}
+			&::-ms-track {
+				width: 100%;
+				cursor: pointer;
+				background: transparent;
+				border-color: transparent;
+				color: transparent;
+			}
 
-	&::-ms-fill-lower {
-		background: darken($track-color, $contrast);
-		border: $track-border-width solid $track-border-color;
-		border-radius: $track-radius*2;
-		@include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
-	}
-	&::-ms-fill-upper {
-		background: $track-color;
-		border: $track-border-width solid $track-border-color;
-		border-radius: $track-radius*2;
-		@include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
-	}
-	&::-ms-thumb {
-		@include thumb();
-	}
-	&:focus::-ms-fill-lower {
-		background: $track-color;
-	}
-	&:focus::-ms-fill-upper {
-		background: lighten($track-color, $contrast);
+			&::-ms-fill-lower {
+				background: transparent;
+				border: none;
+			}
+
+			&::-ms-fill-upper {
+				background: transparent;
+				border: none;
+			}
+
+			&::-webkit-slider-thumb {
+				background-color: $thumb-color;
+				height: $thumb-height;
+				width: $thumb-height;
+				border-radius: 50%;
+				cursor: pointer;
+				-webkit-appearance: none;
+				@include shadow();
+			}
+
+			&::-moz-range-thumb {
+				background-color: $thumb-color;
+				height: $thumb-height;
+				width: $thumb-height;
+				border-radius: 50%;
+				cursor: pointer;
+				-webkit-appearance: none;
+				@include shadow();
+			}
+
+			&::-ms-thumb {
+				height: $thumb-height;
+				width: $thumb-height;
+				border-radius: 50%;
+				background-color: $thumb-color;
+				cursor: pointer;
+				@include shadow();
+			}
+		}
 	}
 }

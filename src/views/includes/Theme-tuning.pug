@@ -1,12 +1,13 @@
 #theme-tuning
 	button.tuning-btn.icon-color-adjust.accent
+	|
 	.range
 		.range__block.hue-rotate
 			h4.title Hue rotate
-			//- span.indicator.accent
-			input(id='color-hue-rotate' type='range' value='0' min='-180' max='180')
+			.container
+				input(id='color-hue-rotate' type='range' value='0' min='-180' max='180' step="1")
 		|
 		.range__block.invert-colors
 			h4.title Invert
-			//- span.indicator.accent
-			input(id='color-invert' type='range' value='0' min='0' max='100')
+			.container
+				input(id='color-invert' type='range' value='0' min='0' max='100' step="1")

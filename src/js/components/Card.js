@@ -8,7 +8,7 @@ export default class Cards {
 
 		listElem.innerHTML = data.map((item, index) => {
 			return (
-				`<li class="item" data-category="${item.filter}" style="background-image:url(${item.img}?${index})">
+				`<li class="item" data-category="${item.filter}" style="background-image:url(?${index})">
 					<div class="details accent">
 						<h3 class="title">${item.title}</h3>
 						<div class="description">${item.descr}</div>

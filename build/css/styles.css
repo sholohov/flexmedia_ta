@@ -594,85 +594,6 @@ html {
             transform: translateZ(-6vh); } }
 
 
-input[type=range] {
-  -webkit-appearance: none;
-  margin: 16px 0;
-  width: 100%; }
-  input[type=range]:focus {
-    outline: none; }
-  input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 4px;
-    cursor: pointer;
-    animate: 0.2s;
-    -webkit-box-shadow: 0 0 0 transparent, 0px 0px 0 rgba(5, 5, 5, 0);
-            box-shadow: 0 0 0 transparent, 0px 0px 0 rgba(5, 5, 5, 0);
-    background: gray;
-    -webkit-border-radius: 2px;
-            border-radius: 2px;
-    border: 0 solid transparent; }
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(5, 5, 5, 0.2);
-            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(5, 5, 5, 0.2);
-    border: 0 solid transparent;
-    height: 32px;
-    width: 32px;
-    -webkit-border-radius: 50%;
-            border-radius: 50%;
-    background: white;
-    cursor: ew-resize;
-    -webkit-appearance: none;
-    margin-top: -14px; }
-  input[type=range]:focus::-webkit-slider-runnable-track {
-    background: gray; }
-  input[type=range]::-moz-range-track {
-    width: 100%;
-    height: 4px;
-    cursor: pointer;
-    animate: 0.2s;
-    box-shadow: 0 0 0 transparent, 0px 0px 0 rgba(5, 5, 5, 0);
-    background: gray;
-    border-radius: 2px;
-    border: 0 solid transparent; }
-  input[type=range]::-moz-range-thumb {
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(5, 5, 5, 0.2);
-    border: 0 solid transparent;
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    background: white;
-    cursor: ew-resize; }
-  input[type=range]::-ms-track {
-    width: 100%;
-    height: 4px;
-    cursor: pointer;
-    animate: 0.2s;
-    background: transparent;
-    border-color: transparent;
-    border-width: 32px 0;
-    color: transparent; }
-  input[type=range]::-ms-fill-lower {
-    background: gray;
-    border: 0 solid transparent;
-    border-radius: 4px;
-    box-shadow: 0 0 0 transparent, 0px 0px 0 rgba(5, 5, 5, 0); }
-  input[type=range]::-ms-fill-upper {
-    background: gray;
-    border: 0 solid transparent;
-    border-radius: 4px;
-    box-shadow: 0 0 0 transparent, 0px 0px 0 rgba(5, 5, 5, 0); }
-  input[type=range]::-ms-thumb {
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(5, 5, 5, 0.2);
-    border: 0 solid transparent;
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    background: white;
-    cursor: ew-resize; }
-  input[type=range]:focus::-ms-fill-lower {
-    background: gray; }
-  input[type=range]:focus::-ms-fill-upper {
-    background: gray; }
 
 [role="button"],
 input[type="submit"],
@@ -720,86 +641,6 @@ button::-moz-focus-inner {
       -ms-user-select: none;
           user-select: none; }
 
-input[type=range] {
-  -webkit-appearance: none;
-  margin: 16px 0;
-  width: 100%; }
-  input[type=range]:focus {
-    outline: none; }
-  input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 4px;
-    cursor: pointer;
-    animate: 0.2s;
-    -webkit-box-shadow: 0 0 0 transparent, 0px 0px 0 rgba(5, 5, 5, 0);
-            box-shadow: 0 0 0 transparent, 0px 0px 0 rgba(5, 5, 5, 0);
-    background: gray;
-    -webkit-border-radius: 2px;
-            border-radius: 2px;
-    border: 0 solid transparent; }
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(5, 5, 5, 0.2);
-            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(5, 5, 5, 0.2);
-    border: 0 solid transparent;
-    height: 32px;
-    width: 32px;
-    -webkit-border-radius: 50%;
-            border-radius: 50%;
-    background: white;
-    cursor: ew-resize;
-    -webkit-appearance: none;
-    margin-top: -14px; }
-  input[type=range]:focus::-webkit-slider-runnable-track {
-    background: gray; }
-  input[type=range]::-moz-range-track {
-    width: 100%;
-    height: 4px;
-    cursor: pointer;
-    animate: 0.2s;
-    box-shadow: 0 0 0 transparent, 0px 0px 0 rgba(5, 5, 5, 0);
-    background: gray;
-    border-radius: 2px;
-    border: 0 solid transparent; }
-  input[type=range]::-moz-range-thumb {
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(5, 5, 5, 0.2);
-    border: 0 solid transparent;
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    background: white;
-    cursor: ew-resize; }
-  input[type=range]::-ms-track {
-    width: 100%;
-    height: 4px;
-    cursor: pointer;
-    animate: 0.2s;
-    background: transparent;
-    border-color: transparent;
-    border-width: 32px 0;
-    color: transparent; }
-  input[type=range]::-ms-fill-lower {
-    background: gray;
-    border: 0 solid transparent;
-    border-radius: 4px;
-    box-shadow: 0 0 0 transparent, 0px 0px 0 rgba(5, 5, 5, 0); }
-  input[type=range]::-ms-fill-upper {
-    background: gray;
-    border: 0 solid transparent;
-    border-radius: 4px;
-    box-shadow: 0 0 0 transparent, 0px 0px 0 rgba(5, 5, 5, 0); }
-  input[type=range]::-ms-thumb {
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(5, 5, 5, 0.2);
-    border: 0 solid transparent;
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    background: white;
-    cursor: ew-resize; }
-  input[type=range]:focus::-ms-fill-lower {
-    background: gray; }
-  input[type=range]:focus::-ms-fill-upper {
-    background: gray; }
-
 #theme-tuning {
   z-index: 5;
   position: fixed;
@@ -823,6 +664,81 @@ input[type=range] {
   transition: transform 0.3s, -webkit-transform 0.3s;
   -webkit-transform: translate3d(0, 100%, 0);
           transform: translate3d(0, 100%, 0); }
+  #theme-tuning .container {
+    display: block;
+    position: relative; }
+    #theme-tuning .container:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0.5rem;
+      right: 0.5rem;
+      -webkit-border-radius: 0.125rem;
+              border-radius: 0.125rem;
+      height: 0.25rem;
+      background-color: grey;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
+    #theme-tuning .container input[type=range] {
+      position: relative;
+      margin: 0;
+      width: 100%;
+      height: 2.25rem !important;
+      font-size: 1rem;
+      border: none;
+      background-color: transparent;
+      overflow: visible;
+      -webkit-appearance: none; }
+      #theme-tuning .container input[type=range]:focus {
+        outline: none;
+        border: none; }
+      #theme-tuning .container input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        cursor: pointer;
+        background-color: transparent; }
+      #theme-tuning .container input[type=range]::-moz-range-track {
+        width: 100%;
+        cursor: pointer;
+        background-color: transparent; }
+      #theme-tuning .container input[type=range]::-ms-track {
+        width: 100%;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent; }
+      #theme-tuning .container input[type=range]::-ms-fill-lower {
+        background: transparent;
+        border: none; }
+      #theme-tuning .container input[type=range]::-ms-fill-upper {
+        background: transparent;
+        border: none; }
+      #theme-tuning .container input[type=range]::-webkit-slider-thumb {
+        background-color: #fff;
+        height: 2rem;
+        width: 2rem;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -webkit-box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
+                box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2); }
+      #theme-tuning .container input[type=range]::-moz-range-thumb {
+        background-color: #fff;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        cursor: pointer;
+        -webkit-appearance: none;
+        box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2); }
+      #theme-tuning .container input[type=range]::-ms-thumb {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+        box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2); }
   #theme-tuning .range {
     display: block;
     margin: 0.5rem 1rem;
@@ -836,7 +752,7 @@ input[type=range] {
     #theme-tuning .range__block {
       display: block;
       white-space: nowrap;
-      padding: 0.25rem 0.5rem;
+      padding: 0 0.5rem;
       margin: 0.5rem 0; }
       #theme-tuning .range__block > .title {
         margin: 0.5rem 0;
