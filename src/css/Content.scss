@@ -8,8 +8,21 @@
 	overflow: hidden;
 	height: 100%;
 	width: 100%;
-	// max-width: 1620px;
 	background-color: rgb(128, 128, 128);
 	overflow-x: hidden;
 	overflow-y: auto;
+
+	#backdrop {
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		background-color: rgba(24, 24, 24, 0.7);
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 0.3s;
+
+		&.active {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
 }

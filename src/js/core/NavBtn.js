@@ -5,10 +5,24 @@ export default class NavBtn {
 		const navBtnElem = document.querySelector('#nav-btn');
 		const asideLeftElem = document.querySelector('#aside-left');
 		const contentElem = document.querySelector('#content');
+		const backdrop = document.querySelector('#backdrop');
+
+		let isOpenMenu = false;
+
+		function menuDrawerToggle() {
+			navBtnElem.classList[isOpenMenu ? 'add' : 'remove']('active');
+			backdrop.classList[isOpenMenu ? 'add' : 'remove']('active');
+			asideLeftElem.classList[isOpenMenu ? 'add' : 'remove']('open');
+		}
 
 		navBtnElem.addEventListener('click', () => {
-			let isActive = navBtnElem.classList.toggle('active');
-			asideLeftElem.classList[isActive ? 'add' : 'remove']('open');
+			isOpenMenu = !isOpenMenu;
+			menuDrawerToggle();
+		});
+		
+		backdrop.addEventListener('click', () => {
+			isOpenMenu = false;
+			menuDrawerToggle();
 		});
 
 		/** Width vertical scrollbar */

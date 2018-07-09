@@ -113,6 +113,7 @@ html {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+    position: relative;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -149,6 +150,7 @@ html {
   height: 100%;
   width: 300px;
   min-width: 300px;
+  background-color: #303030;
   -webkit-box-shadow: 1rem 0 2rem rgba(0, 0, 0, 0.6);
           box-shadow: 1rem 0 2rem rgba(0, 0, 0, 0.6);
   -webkit-box-sizing: border-box;
@@ -193,8 +195,7 @@ html {
     font-size: 0.75rem;
     margin: 0;
     padding: 25% 1rem;
-    color: rgba(255, 255, 255, 0.2);
-    background-color: #303030; }
+    color: rgba(255, 255, 255, 0.2); }
 
 #content {
   z-index: 1;
@@ -217,6 +218,21 @@ html {
   background-color: gray;
   overflow-x: hidden;
   overflow-y: auto; }
+  #content #backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(24, 24, 24, 0.7);
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
+    #content #backdrop.active {
+      opacity: 1;
+      pointer-events: auto; }
 
 #filter {
   background-color: #303030; }
@@ -303,12 +319,12 @@ html {
 /* '' */
 
 #nav-btn {
-  z-index: 3;
+  z-index: 1;
   position: fixed;
   display: none;
   top: 0;
   right: 0;
-  margin: 1rem;
+  margin: 0.5rem;
   width: 3.5rem;
   height: 3.5rem;
   cursor: pointer;
@@ -316,13 +332,17 @@ html {
   outline: none;
   border: none;
   background-color: transparent;
+  -webkit-perspective: 10rem;
+          perspective: 10rem;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   -webkit-filter: drop-shadow(0 0.125rem 0.25rem black);
           filter: drop-shadow(0 0.125rem 0.25rem black); }
   #nav-btn .sandwich-icon {
     display: block;
     position: relative;
-    width: 3rem;
-    height: 3rem;
+    width: 100%;
+    height: 100%;
     -webkit-transform: rotateY(0) translateZ(0);
             transform: rotateY(0) translateZ(0);
     -webkit-transition: -webkit-transform 0.4s;
@@ -330,17 +350,14 @@ html {
     -o-transition: transform 0.4s;
     transition: transform 0.4s;
     transition: transform 0.4s, -webkit-transform 0.4s;
-    -webkit-perspective: 10rem;
-            perspective: 10rem;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d; }
     #nav-btn .sandwich-icon::before, #nav-btn .sandwich-icon::after {
       content: '';
       position: absolute;
-      top: 0.85rem;
-      left: 0.5rem;
+      top: 1.5rem;
+      left: 0.75rem;
       display: block;
-      margin: 0.5rem auto;
       width: 2rem;
       height: 0.25rem;
       background-color: white;
@@ -479,11 +496,21 @@ html {
         padding: 0 0 1rem;
         border-bottom: 1px solid white; }
       #portfolio .item .details .link {
-        display: block;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         height: 4rem;
         width: 4rem;
         text-align: center;
-        line-height: 4rem;
         margin: 1rem auto;
         text-decoration: none;
         color: white;
@@ -491,11 +518,9 @@ html {
         -webkit-border-radius: 50%;
                 border-radius: 50%; }
         #portfolio .item .details .link::before {
-          margin: 0;
-          width: 1.5rem;
-          height: 1.5rem;
-          font-size: 1.5rem;
-          line-height: 1em; }
+          display: block;
+          margin: -0.125rem -0.125rem 0 0;
+          font-size: 1.5rem; }
         #portfolio .item .details .link:hover {
           color: #fa453c;
           background-color: #fff; }
@@ -690,7 +715,7 @@ button::-moz-focus-inner {
       -webkit-border-radius: 0.125rem;
               border-radius: 0.125rem;
       height: 0.25rem;
-      background-color: rgba(128, 128, 128, 0.5);
+      background-color: rgba(0, 0, 0, 0.2);
       -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
               transform: translateY(-50%); }
