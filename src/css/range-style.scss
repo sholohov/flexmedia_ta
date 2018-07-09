@@ -3,7 +3,7 @@
 }
 
 @mixin range() {
-	$track-color: grey;
+	$track-color: rgba(128, 128, 128, 0.5);
 	$thumb-height: 2rem;
 
 	$track-height: 0.25rem;

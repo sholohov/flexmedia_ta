@@ -677,7 +677,7 @@ button::-moz-focus-inner {
       -webkit-border-radius: 0.125rem;
               border-radius: 0.125rem;
       height: 0.25rem;
-      background-color: grey;
+      background-color: rgba(128, 128, 128, 0.5);
       -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
               transform: translateY(-50%); }
@@ -742,7 +742,6 @@ button::-moz-focus-inner {
   #theme-tuning .range {
     display: block;
     margin: 0.5rem 1rem;
-    opacity: 0;
     text-align: center;
     padding: 0.5rem 0.75rem;
     background: rgba(255, 255, 255, 0.7);
@@ -809,5 +808,4 @@ button::-moz-focus-inner {
       -webkit-transform: translate3d(0, 0, 0);
               transform: translate3d(0, 0, 0); }
     #theme-tuning.active .range {
-      opacity: 1;
       pointer-events: auto; }
