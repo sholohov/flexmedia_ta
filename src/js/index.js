@@ -1,16 +1,19 @@
 console.warn("Hello people!");
 
-// import * as Tools from './tools'
+import * as Tools from './tools'
 import './libs/polyfils';
-import cardData from '../data/cards';
+// import cardData from '../data/cards';
 import Card from './components/Card';
 import Filter from './core/Filter';
 import NavBtn from './core/NavBtn';
 import ThemeTuning from './core/ThemeTuning';
 
 document.addEventListener("DOMContentLoaded", () => {
-	Card.dataSet(cardData.cards);
-	Filter.dataSet(cardData.cards);
+	Tools.xhr('cards.json', 'json', ({cards}) => {
+		Card.dataSet(cards);
+		Filter.dataSet(cards);
+	});
+
 	NavBtn.init();
 	ThemeTuning.init();
 });
