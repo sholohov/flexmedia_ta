@@ -77,7 +77,9 @@ export default class ThemeTuning {
 			return el.offsetWidth - el.clientWidth;
 		}
 
-		themeTunungElem.style.right = getScrollbarWidth(contentElem) + 'px';
+		window.addEventListener('load', () => {
+			themeTunungElem.style.right = getScrollbarWidth(contentElem) + 'px';
+		});
 
 		Tools.onWindowResize(() => {
 			themeTunungElem.style.right = getScrollbarWidth(contentElem) + 'px';

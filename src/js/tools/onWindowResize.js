@@ -3,7 +3,11 @@
  * @param {function} cb каллбэк
  * @param {number} [duration=300] интервал в миллисикундах
  */
+
+let resizeList = [];
+
 function onWindowResize(cb, duration = 300) {
+	resizeList.push({cb, duration});
 	let timeout;
 	window.addEventListener('resize', function() {
 		clearTimeout(timeout);

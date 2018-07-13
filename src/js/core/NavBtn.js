@@ -3,6 +3,7 @@ import * as Tools from '../tools';
 export default class NavBtn {
 	static init() {
 		const navBtnElem = document.querySelector('#nav-btn');
+		const themeTuningElem = document.querySelector('#theme-tuning');
 		const asideLeftElem = document.querySelector('#aside-left');
 		const contentElem = document.querySelector('#content');
 		const backdrop = document.querySelector('#backdrop');
@@ -30,7 +31,9 @@ export default class NavBtn {
 			return el.offsetWidth - el.clientWidth;
 		}
 
-		navBtnElem.style.right = getScrollbarWidth(contentElem) + 'px';
+		window.addEventListener('load', () => {
+			navBtnElem.style.right = getScrollbarWidth(contentElem) + 'px';
+		});
 
 		Tools.onWindowResize(() => {
 			navBtnElem.style.right = getScrollbarWidth(contentElem) + 'px';
