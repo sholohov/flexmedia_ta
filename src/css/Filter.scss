@@ -9,11 +9,15 @@
 		font-size: 1.125rem;
 		font-weight: 400;
 		color: $color-accent;
-
+		
 		&::before {
 			margin: 0 0.5rem 0 0;
 			// background: url(../img/filter-icon.png) center / contain no-repeat;
 		}
+		
+		@include mobileView() {
+			padding: 1.25rem;
+		};
 	}
 	
 	.list {
@@ -37,6 +41,11 @@
 				&.active {
 					color: white;
 				}
+
+				@include mobileView() {
+					font-size: 1rem;
+					padding: 0.5rem 1.25rem;
+				};
 			}
 		}
 	}

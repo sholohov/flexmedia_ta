@@ -41,7 +41,7 @@
 				width: 100%;
 			}
 		}
-
+		
 		.details {
 			opacity: 0;
 			display: flex;
@@ -54,6 +54,7 @@
 			pointer-events: none;
 			transform: scale(1.5) translateZ(0);
 			transition: 0.3s;
+			background-color: $color-accent;
 
 			.title {
 				margin: 0;
@@ -99,7 +100,6 @@
 			.details {
 				opacity: 1;
 				pointer-events: auto;
-				background-color: $color-accent;
 				transform: scale(1) translateZ(0);
 			}
 		}

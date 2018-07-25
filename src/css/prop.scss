@@ -1,5 +1,4 @@
 //out: null
-
 $color-accent: rgb(250, 69, 60);
 $rem: 0.0625rem;
 $em: 0.0625em;
@@ -8,10 +7,16 @@ $screen-laptop: 64em;
 $screen-tablet: 48em;
 $screen-mobile: 30em;
 
+@mixin mobileView() {
+	@media (max-width: $screen-mobile) and (orientation: portrait), (max-width: $screen-laptop) {
+		@content;
+	}
+}
+
 @mixin outline($color: rgba(255, 166, 0, 0.5)) {
 	outline: 1px solid $color !important;
 
-	* , ::before, ::after {
+	*, ::before, ::after {
 		outline: 1px solid $color !important;
 	}
 }

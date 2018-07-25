@@ -245,6 +245,9 @@ html {
     color: #fa453c; }
     #filter .title::before {
       margin: 0 0.5rem 0 0; }
+    @media (max-width: 30em) and (orientation: portrait), (max-width: 64em) {
+      #filter .title {
+        padding: 1.25rem; } }
   #filter .list {
     list-style: none;
     padding: 0;
@@ -260,6 +263,10 @@ html {
         color: rgba(255, 255, 255, 0.7); }
       #filter .list .list__item .link.active {
         color: white; }
+      @media (max-width: 30em) and (orientation: portrait), (max-width: 64em) {
+        #filter .list .list__item .link {
+          font-size: 1rem;
+          padding: 0.5rem 1.25rem; } }
 
 @charset "UTF-8";
 @font-face {
@@ -485,7 +492,8 @@ html {
               transform: scale(1.5) translateZ(0);
       -webkit-transition: 0.3s;
       -o-transition: 0.3s;
-      transition: 0.3s; }
+      transition: 0.3s;
+      background-color: #fa453c; }
       #portfolio .item .details .title {
         margin: 0;
         padding: 0.5rem 0;
@@ -528,7 +536,6 @@ html {
     #portfolio .item:hover .details {
       opacity: 1;
       pointer-events: auto;
-      background-color: #fa453c;
       -webkit-transform: scale(1) translateZ(0);
               transform: scale(1) translateZ(0); }
 

@@ -1,7 +1,7 @@
 import * as Tools from '../tools'
 
-export default class ThemeTuning {
-	static init() {
+class ThemeTuning {
+	static init(state) {
 		const themeTunungElem = document.querySelector('#theme-tuning');
 		const range = document.querySelector('#theme-tuning .range');
 		const btn = document.querySelector('#theme-tuning .tuning-btn');
@@ -9,14 +9,7 @@ export default class ThemeTuning {
 		const accentElementsList = document.querySelectorAll('.accent');
 		const storage = window.localStorage;
 
-		if (!(themeTunungElem.style.filter = `hue-rotate(0deg)`)) {
-			btn.addEventListener('click', () => {
-				alert('Sorry. Color adjusting not working on this browser.')
-			});
-			return;
-		}
-
-		let color = {
+		const color = {
 			hue: 0,
 			invert: 0
 		}
@@ -31,11 +24,6 @@ export default class ThemeTuning {
 				invert();
 			}
 		}
-
-		btn.addEventListener('click', () => {
-			let isActive = btn.classList.toggle('active');
-			themeTunungElem.classList[isActive ? 'add' : 'remove']('active');
-		});
 
 		function hueRotate() {
 			for (let i = 0; i < accentElementsList.length; i++) {
@@ -69,21 +57,28 @@ export default class ThemeTuning {
 			}
 		}
 
-		range.addEventListener('input', setAccent);
-		range.addEventListener('change', setAccent);
-
 		/** Width vertical scrollbar */
 		function getScrollbarWidth(el) {
 			return el.offsetWidth - el.clientWidth;
 		}
 
-		window.addEventListener('load', () => {
-			themeTunungElem.style.right = getScrollbarWidth(contentElem) + 'px';
-		});
+		if (state) {
+			range.addEventListener('input', setAccent);
+			range.addEventListener('change', setAccent);
 
-		Tools.onWindowResize(() => {
-			themeTunungElem.style.right = getScrollbarWidth(contentElem) + 'px';
-		}, 0);
+			btn.addEventListener('click', () => {
+				let isActive = btn.classList.toggle('active');
+				themeTunungElem.classList[isActive ? 'add' : 'remove']('active');
+			});
+
+			window.addEventListener('load', () => {
+				themeTunungElem.style.right = getScrollbarWidth(contentElem) + 'px';
+			});
+
+			Tools.onWindowResize(() => {
+				themeTunungElem.style.right = getScrollbarWidth(contentElem) + 'px';
+			}, 0);
+		}
 
 		if (Tools.IEDetect() >= 11) {
 			range.innerHTML = `<span>Sorry, IE11 and the version below do not support this feature</span>`;
@@ -91,3 +86,5 @@ export default class ThemeTuning {
 		}
 	}
 }
+
+export default ThemeTuning;
